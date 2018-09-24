@@ -1,0 +1,39 @@
+<h1>{{title}}</h1>
+
+<form action="{{url}}/{{id}}" method="post">
+
+  <p>
+    Foto de perfil:
+    <input type="file" name="photoURL" id="">
+    <input type="submit" value="Subir">
+  </p>
+
+  <p>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" value="{{username}}">
+  </p>
+
+  <p>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="{{email}}">
+  </p>
+
+  <p>
+    <label for="direccion">Dirección</label>
+    <input type="text" name="location[address]" id="address">
+  </p>
+
+  {{#if password}}
+  <p>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+  </p>
+  {{/if}}
+
+  <select name="type">
+   <option value="Empleador">Empleador</option>
+   <option value="Trabajador">Trabajador</option>
+  </select>
+
+  <input type="submit" value="{{btnValue}}">
+</form>

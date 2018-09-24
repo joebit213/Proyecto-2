@@ -1,0 +1,33 @@
+<h2>Hola {{username}}</h2>
+<img src="{{photoURL}}" alt="profile_picture" id="photo">
+
+<button>
+  <a href="/edit/{{_id}}">Editar perfil</a>
+</button>
+
+<button>
+  <a href="/create_new">Publicar</a>
+</button>
+
+<button>
+  <a href='/login'>Logout</a>
+</button>
+
+<div>
+  <h2>Post</h2>
+  <div>
+    {{#each posts}}
+      <h2>{{title}}</h2>
+      <p>{{body}}</p>
+      <img src="{{photo}}" alt="photo">
+    {{/each}}
+  </div>
+</div>
+
+<script>
+
+  document.getElementById('photo').addEventListener('click', () => {
+    window.location.href = "/edit_image"
+  })
+
+</script>
